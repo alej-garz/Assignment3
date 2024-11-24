@@ -1,9 +1,9 @@
 export interface JsonStructure {
-  id: number;
+  id: string;
   name: string;
-  description: string;
+  petKind: string;
   age: number;
-  imgSrc: string;
+  image: string;
   owner: string;
 }
 

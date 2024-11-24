@@ -1,10 +1,14 @@
+<h2>Take a look at our pets!</h2>
 <div class="card">
-  <div class="container">
-    <h2>{{petName}} the {{petKind}}</h2>
-    <p>Pet type: <strong>{{petKind}}</strong></p>
-    <p>{{petName}}'s age: <strong>{{petAge}}</strong></p>
-    <p>{{petName}}'s owner: <strong>{{owner}}</strong></p>
-    <br>
-    <img ngSrc="../images/pets/charlie_dog.jpg" alt="A photo of charlie" height="300" width="300">
-  </div>
+  @for (pet of (pets | async); track pet.id) {
+    <div class="container">
+      <h2><a [routerLink]="['/pets', pet.id]">{{pet.name}} the {{pet.petKind}}</a></h2>
+      <p>Pet type: <strong>{{pet.petKind}}</strong></p>
+      <p>{{pet.name}}'s age: <strong>{{pet.age}}</strong></p>
+      <p>{{pet.name}}'s owner: <strong>{{pet.owner}}</strong></p>
+      <br>
+      <img ngSrc="{{pet.imgSrc}}" [alt]="'A photo of ' + pet.name" height="300" width="300">
+      <hr>
+    </div>
+  }
 </div>
