@@ -36,7 +36,7 @@ export class PetDataService {
       )
   }
 
-  public getFlowerById(id: string): Observable<Pet | undefined> {
+  public getFlowerById(id: Number): Observable<Pet | undefined> {
     return this.getAllPets().pipe(
       map(pets => pets.find(pet => pet.id === id))
     )

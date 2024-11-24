@@ -1,1 +1,18 @@
-<p>pet-details works!</p>
+@if (pet !== undefined) {
+  <div class="container">
+    <h2>{{pet.name}} the {{pet.petKind}}</h2>
+    <p>Pet type: <strong>{{pet.petKind}}</strong></p>
+    <p>{{pet.name}}'s age: <strong>{{pet.age}}</strong></p>
+    <p>{{pet.name}}'s owner: <strong>{{pet.owner}}</strong></p>
+    <br>
+    <img ngSrc="{{pet.imgSrc}}" [alt]="'A photo of ' + pet.name" height="300" width="300">
+    <hr>
+  </div>
+} @else{
+  <p class="message">
+    The data is not available
+  </p>
+}
+<p>
+  <a routerLink="/pets">Pets Homepage</a>
+</p>

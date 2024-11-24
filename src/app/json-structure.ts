@@ -1,5 +1,5 @@
 export interface JsonStructure {
-  id: string;
+  id: number;
   name: string;
   petKind: string;
   age: number;
