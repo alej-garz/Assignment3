@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../../public/fonts/Ubuntu-Regular.ttf");
+}
+
+* {
+  font-family: 'Ubuntu';
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+p strong {
+  font-weight: bold;
+  color: #007bff;
+}
